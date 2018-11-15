@@ -64,13 +64,9 @@
 <wire x1="46.66" y1="0" x2="46.66" y2="38.09" width="0" layer="20"/>
 <wire x1="46.66" y1="38.09" x2="0" y2="38.09" width="0" layer="20"/>
 <wire x1="0" y1="38.09" x2="0" y2="0" width="0" layer="20"/>
+<text x="33.02" y="15.24" size="1.27" layer="1" font="fixed" align="center">kx4</text>
 <text x="35.56" y="1.27" size="1.778" layer="1" font="fixed" align="center">FM Transmitter</text>
-<text x="30.48" y="13.97" size="1.4224" layer="1" ratio="0">KX4</text>
-<text x="2.54" y="34.29" size="1.4224" layer="1" ratio="0">1BM16EC001</text>
-<text x="3.81" y="19.05" size="1.4224" layer="1" ratio="0" rot="R90">1BM16EC044</text>
-<text x="31.75" y="34.29" size="1.4224" layer="1" ratio="0">1BM16EC050</text>
-<text x="45.72" y="11.43" size="1.4224" layer="1" ratio="0" rot="R90">1BM16EC052</text>
-<text x="2.54" y="15.24" size="1.4224" layer="1" ratio="0" rot="R270">1BM14EC055</text>
+<text x="22.86" y="36.83" size="1.27" layer="1" font="fixed" align="center">1BM16ECE 01,44,50,52,55</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
