@@ -9415,8 +9415,8 @@ molded</description>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-040X050" package3d_urn="urn:adsk.eagle:package:23634/1" value="0.1uF"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-040X050" package3d_urn="urn:adsk.eagle:package:23634/1" value="0.01uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-040X050" package3d_urn="urn:adsk.eagle:package:23634/1" value="4.7pF"/>
-<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-TRIMM" device="3050.505" package3d_urn="urn:adsk.eagle:package:23773/1" value="4-40pF"/>
 <part name="L1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="L" device="0204/7" package3d_urn="urn:adsk.eagle:package:13274/1" value="0.1uH"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-TRIMM" device="808" package3d_urn="urn:adsk.eagle:package:23766/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -9475,13 +9475,13 @@ molded</description>
 <attribute name="NAME" x="77.724" y="58.801" size="1.778" layer="95"/>
 <attribute name="VALUE" x="77.724" y="53.721" size="1.778" layer="96"/>
 </instance>
-<instance part="C4" gate="G$1" x="66.04" y="73.66" smashed="yes">
-<attribute name="NAME" x="67.564" y="74.041" size="1.778" layer="95"/>
-<attribute name="VALUE" x="65.786" y="68.453" size="1.778" layer="96"/>
-</instance>
 <instance part="L1" gate="G$1" x="76.2" y="71.12" smashed="yes">
 <attribute name="NAME" x="74.7014" y="69.85" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="79.502" y="67.31" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C6" gate="G$1" x="66.04" y="73.66" smashed="yes">
+<attribute name="NAME" x="67.564" y="74.041" size="1.778" layer="95"/>
+<attribute name="VALUE" x="68.326" y="68.453" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -9490,15 +9490,12 @@ molded</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="C4" gate="G$1" pin="E"/>
 <wire x1="-5.08" y1="76.2" x2="10.16" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="76.2" x2="30.48" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="76.2" x2="48.26" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="76.2" x2="55.88" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="76.2" x2="66.04" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
-<junction x="66.04" y="76.2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <junction x="10.16" y="76.2"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -9506,8 +9503,11 @@ molded</description>
 <pinref part="R6" gate="G$1" pin="2"/>
 <junction x="48.26" y="76.2"/>
 <pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="73.66" x2="55.88" y2="76.2" width="0.1524" layer="91"/>
 <junction x="55.88" y="76.2"/>
+<pinref part="C6" gate="G$1" pin="E"/>
+<junction x="66.04" y="76.2"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -9564,9 +9564,7 @@ molded</description>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="C4" gate="G$1" pin="A"/>
 <pinref part="T2" gate="G1" pin="C"/>
-<wire x1="66.04" y1="68.58" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="66.04" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="66.04" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
@@ -9574,6 +9572,8 @@ molded</description>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="66.04" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
 <junction x="76.2" y="66.04"/>
+<pinref part="C6" gate="G$1" pin="A"/>
+<wire x1="66.04" y1="68.58" x2="66.04" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
